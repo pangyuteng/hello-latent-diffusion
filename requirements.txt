@@ -1,0 +1,4 @@
+tensorflow_datasets>=4.7.0
+albumentations>=1.3.0
+imageio>=2.22.4
+git+https://github.com/keras-team/keras-cv.git@1539a9c1a14a719f0355b5e9ea772293dea06206
