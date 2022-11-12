@@ -18,7 +18,14 @@ python setup.py install
 cd stable-diffusion
 python setup.py install
 
+# WIP
+bash scripts/download_first_stages.sh
+
 # cd to latent-diffusion repo and train
-python main.py --base configs/latent-diffusion/ffhq-ldm-vq-4.yaml -t --gpus 0,1
+python main.py --base configs/latent-diffusion/ffhq-ldm-vq-4.yaml -t --gpus 0, --accelerator gpu
+
+
+if you add `--gpus 0,1`, you end up getting "Bus error" https://github.com/pytorch/pytorch/issues/2244
+
 
 ```

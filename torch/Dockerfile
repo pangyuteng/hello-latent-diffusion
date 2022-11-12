@@ -5,5 +5,7 @@ WORKDIR /opt
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-#COPY requirements-ldm.txt .
-#RUN pip install -r requirements-ldm.txt
+# for cv2
+RUN apt-get install ffmpeg libsm6 libxext6 -yq
+
+ENV PYTHONPATH /mnt/hd1/github/taming-transformers:/mnt/hd1/github/CLIP:/mnt/hd1/github/latent-diffusion
